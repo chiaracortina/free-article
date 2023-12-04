@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Modifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    
+        #urlInput {
+            width: 300px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>    
+</head>
+<body>
+    <h1>Get access to any web article for free</h1>
+    <form id="urlForm">
+        <input type="text" id="urlInput" placeholder="Enter URL here">
+        <button type="submit">Open</button>
+    </form>
+    <script>
+        document.getElementById('urlForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var userInput = document.getElementById('urlInput').value;
+            var modifiedUrl = 'http://webcache.googleusercontent.com/search?q=cache:' + userInput; // Replace with your desired modification
+            window.open(modifiedUrl, '_blank');
+        });
+    </script>    
+</body>
+</html>
