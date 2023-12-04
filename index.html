@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
     <title>URL Modifier</title>
     <style>
         body {
@@ -18,9 +19,9 @@
 </head>
 <body>
     <h1>Get access to any web article for free</h1>
-    <form id="urlForm">
-        <input type="text" id="urlInput" placeholder="Enter URL here">
-        <button type="submit">Open</button>
+    <form id="urlForm" class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+        <input type="text" id="urlInput" placeholder="Enter URL here" class="form-input px-4 py-3 rounded-md">
+        <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">Modify and Open</button>
     </form>
     <script>
         document.getElementById('urlForm').addEventListener('submit', function(event) {
